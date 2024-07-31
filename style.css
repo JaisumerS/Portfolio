@@ -1,0 +1,7 @@
+.titlepage {
+    text-align: center;
+    background-color: rgb(255, 247, 237);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
