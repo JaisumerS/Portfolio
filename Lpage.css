@@ -1,0 +1,8 @@
+@font-face {
+    font-family: techFont;
+    src: url("/Fonts/Cursivertex.ttf");
+}
+
+h1{
+    font-family: techFont;
+}
