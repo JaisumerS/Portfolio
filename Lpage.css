@@ -46,8 +46,9 @@ header{
     box-shadow: 0 0 2.5px #ff00d4, 0 0 5px #ff00d4, 0 0 10px #ff00d4, 0 0 15px #ff00d4;
     border-radius: 10px;
     background-image: url(/Images/Neon-img.jpg);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,11 +57,13 @@ header{
 .neon-border::after {
     content: '';
     position: absolute;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     inset: 0;
-    background-image: url(/Images/Neon-img-front.jpg);
-    background-size: cover;
+    background-image: url('/Images/Neon-img-front.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: inherit;
     pointer-events: none;
 }
