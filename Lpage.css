@@ -48,3 +48,8 @@ header{
     background-image: url(/Images/Neon-img.jpg);
     background-size: cover;
 }
+.neon-border::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+}
