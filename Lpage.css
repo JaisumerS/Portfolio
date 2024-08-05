@@ -51,5 +51,8 @@ header{
 .neon-border::after {
     content: '';
     position: absolute;
+    inset: 0 0 0 0;
+    background-image: url(/Images/Neon-img-front.jpg);
+    
     pointer-events: none;
 }
