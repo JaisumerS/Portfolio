@@ -3,8 +3,9 @@
     src: url("/Fonts/Cursivertex.ttf");
 }
 
-h1{
-    font-family: techFont;
+@font-face {
+    font-family: headerFont;
+    src: url(/Fonts/SectorSeven-MAYoY.ttf);
 }
 
 body{
@@ -13,9 +14,11 @@ body{
     height: 100%;
     color: #eee;
     background-color: #000;
+    font-family: headerFont;
 }
 
 header{
+    font-size: 30px;
     height: 70px;
     padding: 0 100px;
     display: flex;
@@ -25,6 +28,7 @@ header{
 }
 
 .gradient-background{
+    margin-top: -70px;
     width: 100vw;
     height: 150vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(3, 43, 117, 1) 100%);
@@ -33,7 +37,7 @@ header{
 .neon-border {
     width: 90vh;
     height: 50vh;
-    margin: auto;
+    margin: 70px auto;
     background-color: #000;
     border: 2px solid #ff00d4;
     box-shadow: 0 0 2.5px #ff00d4, 0 0 5px #ff00d4, 0 0 10px #ff00d4, 0 0 15px #ff00d4;
