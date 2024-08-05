@@ -47,12 +47,20 @@ header{
     border-radius: 10px;
     background-image: url(/Images/Neon-img.jpg);
     background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .neon-border::after {
     content: '';
     position: absolute;
-    inset: 0 0 0 0;
+    width: inherit;
+    height: inherit;
+    inset: 0;
     background-image: url(/Images/Neon-img-front.jpg);
-    
+    background-size: cover;
+    border-radius: inherit;
     pointer-events: none;
 }
