@@ -14,10 +14,10 @@ body{
     height: 100%;
     color: #eee;
     background-color: #000;
-    font-family: headerFont;
 }
 
 header{
+    font-family: headerFont;
     font-size: 30px;
     height: 70px;
     padding: 0 100px;
