@@ -1,6 +1,6 @@
 @font-face {
-    font-family: techFont;
-    src: url("/Fonts/Cursivertex.ttf");
+    font-family: ntitle;
+    src: url("/Fonts/Andromeda-eR2n.ttf");
 }
 
 @font-face {
@@ -17,20 +17,29 @@ body{
     background-color: #000;
 }
 
+.introdiv{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+}
+
 header{
+    position: fixed;
     font-family: headerFont;
     font-size: 30px;
-    height: 70px;
-    padding: 0 100px;
+    height: 90px;
+    width: 100%;
+    border-radius: 50px;
+    padding: 0 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    z-index: 1000;
+    background: 
+        linear-gradient(to bottom, rgb(214, 10, 10) 0%, rgba(0, 0, 0, 0.65)90%);
 }
 
 .gradient-background{
-    margin-top: -70px;
     padding-top: 100px;
-    width: 100vw;
     height: 200vh;
     background: 
         linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(3, 43, 117, 1) 100%),
@@ -55,6 +64,7 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
+    perspective: 1000px;
 }
 .neon-border::after {
     content: '';
@@ -68,4 +78,47 @@ header{
     background-repeat: no-repeat;
     border-radius: inherit;
     pointer-events: none;
+    z-index: 2;
 }
+@keyframes titlemoved {
+    0%{
+        bottom: 10%;
+        font-size: 2vw;
+    }
+    100%{
+        bottom: 80%;
+        font-size: 6vw;
+    }
+}
+
+.neontitle{
+    font-family: ntitle;
+    position: absolute;
+    z-index: 1;
+    animation: titlemoved 3s ease-in-out forwards;
+}
+
+@keyframes spawn{
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(720deg);
+    }
+}
+.blackholepng{
+    color: black;
+    opacity: 0;
+    animation: spawn 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+/*
+Find out how to make another css that can be imported in this and used by another javascript file
+Make the title go down when star is clicked, and star go up a little
+Opacity of spinenr becomes 1 and the spinner can start spinning around the blackhole
+Add another dissapearing message which says, this is worth clicking
+then add a new one that appears beside it
+*/
