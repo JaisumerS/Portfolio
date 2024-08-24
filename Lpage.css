@@ -9,33 +9,36 @@
 }
 
 body{
+    width: 100vw;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     height: 100%;
     color: #eee;
     background-color: #000;
+
 }
 
 .introdiv{
     width: 100%;
-    height: 10vh;
-    background-color: white;
+    height: 40vh;
+    background: 
+        linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgb(2, 28, 77) 100%);
 }
 
 header{
-    position: fixed;
+    position: absolute;
     font-family: headerFont;
     font-size: 30px;
     height: 90px;
     width: 100%;
     border-radius: 50px;
-    padding: 0 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 1000;
     background: 
-        linear-gradient(to bottom, rgb(214, 10, 10) 0%, rgba(0, 0, 0, 0.65)90%);
+        linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.85)90%);
 }
 
 .gradient-background{
@@ -47,6 +50,7 @@ header{
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
+    background-repeat: no-repeat;
 }
 
 .neon-border {
@@ -101,11 +105,11 @@ header{
 @keyframes spawn{
     0%{
         opacity: 0;
-        transform: rotate(0deg);
+        transform: rotate(0deg) scale(1);
     }
     100%{
         opacity: 1;
-        transform: rotate(720deg);
+        transform: rotate(720deg) scale(0.5);
     }
 }
 .blackholepng{
@@ -113,6 +117,7 @@ header{
     opacity: 0;
     animation: spawn 2s ease-in-out forwards;
     animation-delay: 3s;
+    scale: auto;
 }
 
 /*
