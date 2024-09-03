@@ -30,10 +30,11 @@ body{
 
 .introdiv{
     font-family: introfont;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 40vh;
     background: 
@@ -118,19 +119,21 @@ header{
 @keyframes spawn{
     0%{
         opacity: 0;
-        transform: rotate(0deg) scale(1);
+        transform: rotate(0deg);
+        width: 5vw;
     }
     100%{
         opacity: 1;
-        transform: rotate(720deg) scale(0.5);
+        transform: rotate(720deg);
+        width: 2vw;
     }
 }
 .blackholepng{
     color: black;
-    opacity: 0;
-    animation: spawn 2s ease-in-out forwards;
+    opacity: 1;
+    /*animation: spawn 2s ease-in-out forwards;*/
     animation-delay: 3s;
-    scale: auto;
+    scale: 0.5;
 }
 
 /*
