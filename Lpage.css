@@ -120,20 +120,21 @@ header{
     0%{
         opacity: 0;
         transform: rotate(0deg);
-        width: 5vw;
+        width: 5vh;
     }
     100%{
         opacity: 1;
         transform: rotate(720deg);
-        width: 2vw;
+        width: 30vh;
     }
 }
+
 .blackholepng{
     color: black;
-    opacity: 1;
-    /*animation: spawn 2s ease-in-out forwards;*/
+    opacity: 0;
+    animation: spawn 2s ease-in-out forwards;
     animation-delay: 3s;
-    scale: 0.5;
+    width: 5vh;
 }
 
 /*
