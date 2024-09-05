@@ -226,6 +226,9 @@ header{
     font-size: 4vw;
 }
 
+.at{
+    animation: cardup 1s ease-out forwards;
+}
 @keyframes cardup {
     0%{
         bottom: 0%;
