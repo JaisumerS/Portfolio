@@ -100,20 +100,26 @@ header{
 }
 @keyframes titlemoved {
     0%{
+        opacity: 0;
         bottom: 10%;
         font-size: 2vw;
     }
     100%{
+        opacity: 1;
         bottom: 80%;
         font-size: 6vw;
     }
 }
 
 .neontitle{
+    bottom: 10%;
+    opacity: 0;
     font-family: ntitle;
     position: absolute;
     z-index: 1;
-    animation: titlemoved 3s ease-in-out forwards;
+    animation: titlemoved linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 80%;
 }
 
 @keyframes spawn{
