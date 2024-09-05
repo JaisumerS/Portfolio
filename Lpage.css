@@ -39,17 +39,27 @@
     }
 }
 
-.circle{
+.circle {
     width: 40vw;
     height: 40vw;
     border-radius: 50%;
+    background: url(/Images/free-blank-map-asia_53876-147535.avif);
+    background-size: auto 100%;
+    background-repeat: repeat; 
+    background-position: 0 0;
+    animation: slideBackground 5s linear infinite; 
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 5px solid white;
 }
 
+@keyframes slideBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 242.5% 0;
+    }
+}
 
 #nametitle{
     display: flex;
