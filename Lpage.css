@@ -217,31 +217,57 @@ header{
     height: 20vh;
     position: absolute; 
     right: 70%;
-    bottom: 0%;
+    bottom: 10%;
     font-family: basicfont;
     font-size: 2vw;
-    z-index: 1;
+    z-index: 3;
 }
 .appearingtext h1{
     margin: 0;
     font-size: 4vw;
 }
 
-.at{
+.spawncard{
     animation: cardup 1s ease-out forwards;
+}
+.spawnoutcard{
+    animation: cardout 1s ease-out forwards;
 }
 @keyframes cardup {
     0%{
         bottom: 0%;
-        z-index: 0;
+        z-index: 1;
     }
     50%{
         bottom: 20%;
         z-index: 1;
     }
+    60%{
+        bottom: 20%;
+        z-index: 3;
+    }
+    100%{
+        bottom: 0%;
+        z-index: 3;
+    }
+}
+
+@keyframes cardout {
     100%{
         bottom: 0%;
         z-index: 1;
+    }
+    60%{
+        bottom: 20%;
+        z-index: 1;
+    }
+    50%{
+        bottom: 20%;
+        z-index: 3;
+    }
+    0%{
+        bottom: 0%;
+        z-index: 3;
     }
 }
 /*
