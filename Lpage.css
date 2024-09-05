@@ -18,6 +18,11 @@
     src: url(/Fonts/BlackCapsRegular-wgA2.ttf);
 }
 
+@font-face {
+    font-family: basicfont;
+    src: url(/Fonts/TypoRoundBoldDemo-KAZ7.ttf);
+}
+
 @media screen and (min-width: 769px) {			
     #nametitle{
         font-size: 11vh;
