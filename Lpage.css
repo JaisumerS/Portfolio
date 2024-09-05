@@ -39,19 +39,6 @@
     }
 }
 
-.circle {
-    width: 40vw;
-    height: 40vw;
-    border-radius: 50%;
-    background: url(/Images/free-blank-map-asia_53876-147535.avif);
-    background-size: auto 100%;
-    background-repeat: repeat; 
-    background-position: 0 0;
-    animation: slideBackground 5s linear infinite; 
-    overflow: hidden;
-    border: 5px solid white;
-}
-
 @keyframes slideBackground {
     0% {
         background-position: 0 0;
@@ -59,11 +46,6 @@
     100% {
         background-position: 242.5% 0;
     }
-}
-
-#nametitle{
-    display: flex;
-    flex-direction: row;
 }
 
 body{
@@ -74,6 +56,12 @@ body{
     height: 100%;
     color: #eee;
     background-color: #000;
+}
+
+#nametitle{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
 }
 
 .introdiv{
@@ -87,6 +75,22 @@ body{
         linear-gradient(to top, rgba(0, 0, 0, 1) 10%, rgb(2, 28, 77) 100%);
 }
 
+.circle {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: url(/Images/free-blank-map-asia_53876-147535.avif);
+    background-size: auto 100%;
+    background-repeat: repeat; 
+    background-position: 0 0;
+    animation: slideBackground 5s linear infinite; 
+    overflow: hidden;
+    border: 5px solid white;
+    float: right;
+    shape-outside: circle(); 
+    margin-left: 20px;
+}
+/*
 .selfdesc {
     padding-top: 20px;
     display: flex;
@@ -103,7 +107,7 @@ body{
     line-height: 1.2;
 }
 
-/*header{
+header{
     position: absolute;
     font-family: headerFont;
     height: 90px;
@@ -126,10 +130,11 @@ body{
     background-position: center;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+
 }
 
 .neon-border {
-    width: 70vw;
+    width: 80vw;
     height: 90vh;
     margin: auto;
     border: 2px solid #ff00d4;
@@ -172,7 +177,7 @@ body{
     }
 }
 
-.neoneontitle{
+.neontitle{
     bottom: 10%;
     opacity: 0;
     font-family: neontitle;
