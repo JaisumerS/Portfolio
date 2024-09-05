@@ -24,24 +24,15 @@
 }
 
 @media screen and (min-width: 769px) {			
-    #nametitle{
-        font-size: 11vh;
-    }
-    .introdiv{
-        font-size: 10vh;
-    }
+
 }
 
 @media screen and (max-width: 768px) {
-    .introdiv{
-        font-size: 12vw;
-    }
+
 }
 
 @media screen and (max-width: 525px) {
-    .introdiv{
-        font-size: 12vw;
-    }
+
 }
 
 @keyframes slideBackground {
@@ -70,6 +61,7 @@ body{
 }
 
 .introdiv{
+    font-size: 7.5vw;
     font-family: introfont;
     display: flex;
     flex-direction: column;
@@ -216,6 +208,38 @@ header{
     animation-range: entry 20% cover 40%;
 }
 
+.appearingtext{
+    padding: 5px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgb(0, 0, 0, 0) 100%);
+    border-radius: 25px;
+    width: 20vw;
+    height: 20vh;
+    position: absolute; 
+    right: 70%;
+    bottom: 0%;
+    font-family: basicfont;
+    font-size: 2vw;
+    z-index: 1;
+}
+.appearingtext h1{
+    margin: 0;
+    font-size: 4vw;
+}
+
+@keyframes cardup {
+    0%{
+        bottom: 0%;
+        z-index: 0;
+    }
+    50%{
+        bottom: 20%;
+        z-index: 1;
+    }
+    100%{
+        bottom: 0%;
+        z-index: 1;
+    }
+}
 /*
 Find out how to make another css that can be imported in this and used by another javascript file
 Make the title go down when star is clicked, and star go up a little
