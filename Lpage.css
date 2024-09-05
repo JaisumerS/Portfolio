@@ -206,6 +206,7 @@ header{
     animation: spawn linear forwards;
     animation-timeline: view();
     animation-range: entry 20% cover 40%;
+    cursor: pointer;
 }
 
 .appearingtext{
