@@ -1,5 +1,5 @@
 @font-face {
-    font-family: ntitle;
+    font-family: neontitle;
     src: url("/Fonts/Andromeda-eR2n.ttf");
 }
 
@@ -20,7 +20,7 @@
 
 @media screen and (min-width: 769px) {			
     #nametitle{
-        font-size: 13vh;
+        font-size: 11vh;
     }
     .introdiv{
         font-size: 10vh;
@@ -37,6 +37,23 @@
     .introdiv{
         font-size: 12vw;
     }
+}
+
+.circle{
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+}
+
+
+#nametitle{
+    display: flex;
+    flex-direction: row;
 }
 
 body{
@@ -145,10 +162,10 @@ body{
     }
 }
 
-.neontitle{
+.neoneontitle{
     bottom: 10%;
     opacity: 0;
-    font-family: ntitle;
+    font-family: neontitle;
     position: absolute;
     z-index: 1;
     animation: titlemoved linear forwards;
