@@ -1,5 +1,6 @@
 const blackhole = document.getElementById("blackholeclicker")
 const aboutme = document.getElementsByClassName("appearingtext")[0];
+const spinnerbanner = document.get
 let clicked = false;
 
 blackhole.addEventListener('click', e => {
