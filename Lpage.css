@@ -218,8 +218,10 @@ header{
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgb(0, 0, 0, 0) 100%);
     border-radius: 25px;
     width: 20vw;
-    height: 20vh;
+    height: 17vh;
     position: absolute; 
+    display: flex;
+    align-items: center;
     right: 70%;
     bottom: 0%;
     font-family: basicfont;
@@ -243,11 +245,11 @@ header{
         z-index: 1;
     }
     50%{
-        bottom: 20%;
+        bottom: 30%;
         z-index: 1;
     }
     60%{
-        bottom: 20%;
+        bottom: 30%;
         z-index: 3;
     }
     100%{
@@ -262,11 +264,11 @@ header{
         z-index: 1;
     }
     60%{
-        bottom: 20%;
+        bottom: 30%;
         z-index: 1;
     }
     50%{
-        bottom: 20%;
+        bottom: 30%;
         z-index: 3;
     }
     0%{
@@ -274,6 +276,26 @@ header{
         z-index: 3;
     }
 }
+
+.objectspinner{
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+}
+
+.objectspinner .ring{
+    z-index: 4;
+    background-color: black;
+    position: absolute;
+    width: 40vh;
+    height: 30vh;
+    bottom: 20%;
+    left: calc(50% - 20vh);
+}
+
 /*
 Find out how to make another css that can be imported in this and used by another javascript file
 Make the title go down when star is clicked, and star go up a little
