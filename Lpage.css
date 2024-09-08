@@ -290,15 +290,18 @@ header{
     z-index: 4;
     background-color: black;
     position: absolute;
-    width: 40vh;
-    height: 30vh;
+    width: 25vh;
+    height: 15vh;
     bottom: 20%;
-    left: calc(50% - 20vh);
+    left: calc(50% - 12.5vh);
+    transform-style: preserve-3d;
+    transform: perspective(500px);
 }
 
 .objectspinner .ring .ringImages{
     position: absolute;
     inset: 0 0 0 0;
+    transform: translateZ(250px);
 }
 
 .objectspinner .ring .ringImages img{
