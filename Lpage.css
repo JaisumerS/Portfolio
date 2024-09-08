@@ -288,20 +288,31 @@ header{
 
 .objectspinner .ring{
     z-index: 4;
-    background-color: black;
     position: absolute;
-    width: 25vh;
+    width: 20vh;
     height: 15vh;
     bottom: 20%;
-    left: calc(50% - 12.5vh);
+    left: calc(50% - 10vh);
     transform-style: preserve-3d;
-    transform: perspective(500px);
+    transform: perspective(1000px);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: perspective(1000px) rotateY(0deg)
+    }
+    to{
+        transform: perspective(1000px) rotateY(360deg);
+    }
 }
 
 .objectspinner .ring .ringImages{
     position: absolute;
     inset: 0 0 0 0;
-    transform: translateZ(250px);
+    transform:
+        rotateY(calc( (var(--index) - 1) * ((360 / var(--amount))* 1deg)))
+        translateZ(550px);
 }
 
 .objectspinner .ring .ringImages img{
