@@ -300,6 +300,12 @@ header{
     position: absolute;
     inset: 0 0 0 0;
 }
+
+.objectspinner .ring .ringImages img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /*
 Find out how to make another css that can be imported in this and used by another javascript file
 Make the title go down when star is clicked, and star go up a little
