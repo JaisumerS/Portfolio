@@ -1,21 +1,34 @@
 const blackhole = document.getElementById("blackholeclicker")
 const aboutme = document.getElementsByClassName("appearingtext")[0];
-const spinnerbanner = document.getElementById("objectspinner");
-
+const spinnerBanner = document.getElementById("objectspinner");
 let clicked = false;
+
+const ringKeyframes = [
+    {bottom: '0%', opacity: 0},
+    {bottom: '15%', opacity: 1}
+];
+const ringTime = {
+    duration: 1500,
+    easing: 'ease-in-out',
+    fill: 'forwards'
+};
+const ringAnimation = new KeyframeEffect(
+    spinnerBanner, ringKeyframes, ringTime
+);
+const ringSpawn = new Animation(ringAnimation, document.timeline);
 
 blackhole.addEventListener('click', e => {
     if (!clicked) {
         aboutme.classList.add('spawncard');
         aboutme.classList.remove('spawnoutcard');
-        spinnerbanner.style.pointerEvents = 'none';
-        spinnerbanner.style.opacity = '1';
+        spinnerBanner.style.pointerEvents = 'none';/*temporary*/
+        ringSpawn.play();
         clicked = true;
     } else {
         aboutme.classList.remove('spawncard');
         aboutme.classList.add('spawnoutcard');
-        spinnerbanner.style.removeProperty('pointer-events');
-        spinnerbanner.style.opacity = '0';
+        spinnerBanner.style.removeProperty('pointer-events');/*temporary*/
+        ringSpawn.reverse();
         clicked = false;
     }
 });

@@ -235,10 +235,10 @@ header{
 }
 
 .spawncard{
-    animation: cardup 1s ease-out forwards;
+    animation: cardup 1.5s ease-out forwards;
 }
 .spawnoutcard{
-    animation: cardout 1s ease-out forwards;
+    animation: cardout 1.5s ease-out forwards;
 }
 @keyframes cardup {
     0%{
@@ -279,8 +279,10 @@ header{
 }
 
 #objectspinner{
+    opacity: 0;
+    pointer-events: none;
     z-index: 4;
-    bottom: 10%;
+    bottom: 0%;
     width: 100%;
     height: 37vh;
     text-align: center;
