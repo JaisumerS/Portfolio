@@ -1,38 +1,78 @@
 const blackhole = document.getElementById("blackholeclicker")
 const aboutme = document.getElementsByClassName("appearingtext")[0];
 const spinnerBanner = document.getElementById("objectspinner");
+const spinnerRing = document.getElementById("ring");
+const ringAmount = parseInt(getComputedStyle(spinnerRing).getPropertyValue('--amount').trim(), 10)
+const bhp1 = document.getElementById("bhclick1");
+const bhp2 = document.getElementById("bhclick2");
 let clicked = false;
 let animForward = true;
-
-const ringKeyframes = [
+//BANNER
+const bannerKeyframes = [
     {bottom: '0%', opacity: 0},
-    {bottom: '15%', opacity: 1}
+    {bottom: '25%', opacity: 1}
 ];
-const ringTime = {
+const spinnerTime = {
     duration: 1500,
     easing: 'ease-in-out',
     fill: 'forwards'
 };
+const bannerAnimation = new KeyframeEffect(
+    spinnerBanner, bannerKeyframes, spinnerTime
+);
+const bannerSpawn = new Animation(bannerAnimation, document.timeline);
+//RING
+let ringDegree = (360/ringAmount)
+const ringKeyframes = [
+    {transform: `perspective(1000px) rotateX(-10deg) rotateY(${ringDegree}deg)`}
+]
 const ringAnimation = new KeyframeEffect(
-    spinnerBanner, ringKeyframes, ringTime
+    spinnerRing, ringKeyframes, spinnerTime
 );
 const ringSpawn = new Animation(ringAnimation, document.timeline);
+//BLACKHOLE
+const bhKeyframes = [
+    {transform: 'translateY(100%) scale(0.5) rotate(360deg)', zIndex: 4}
+];
+const bhTime = {
+    duration: 1500,
+    easing: 'ease-in-out',
+    fill: 'forwards'
+};
+const bhAnimation = new KeyframeEffect(
+    blackhole, bhKeyframes, bhTime
+);
+const bhSpawn = new Animation(bhAnimation, document.timeline);
 
 blackhole.addEventListener('click', e => {
     if (!clicked) {
         aboutme.classList.add('spawncard');
         aboutme.classList.remove('spawnoutcard');
-        spinnerBanner.style.pointerEvents = 'none';/*temporary*/
+        bhp1.style.transitionDelay = '0s';
+        bhp2.style.transitionDelay = '0.75s';
+        bhp1.style.opacity = 0;
+        bhp2.style.opacity = 1;
+        spinnerBanner.style.pointerEvents = 'auto';/*temporary*/
         if (animForward) {
+            bannerSpawn.play()
+            bhSpawn.play()
             ringSpawn.play()
         } else {
-            ringSpawn.reverse()
+            bannerSpawn.reverse()
+            bhSpawn.reverse()
+            ringSpawn.reverse();
         }
         clicked = true;
     } else {
         aboutme.classList.remove('spawncard');
         aboutme.classList.add('spawnoutcard');
-        spinnerBanner.style.removeProperty('pointer-events');/*temporary*/
+        bhp1.style.transitionDelay = '0.75s';
+        bhp2.style.transitionDelay = '0s';
+        bhp1.style.opacity = 1;
+        bhp2.style.opacity = 0;
+        spinnerBanner.style.pointerEvents = 'none';/*temporary*/
+        bannerSpawn.reverse();
+        bhSpawn.reverse();
         ringSpawn.reverse();
         animForward = false;
         clicked = false;

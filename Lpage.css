@@ -184,13 +184,13 @@ header{
     opacity: 0;
     font-family: neontitle;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     animation: titlemoved linear forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 75%;
 }
 
-@keyframes spawn{
+@keyframes bhspawn{
     0%{
         opacity: 0;
         transform: rotate(0deg);
@@ -206,12 +206,35 @@ header{
 .blackholepng{
     color: black;
     opacity: 0;
-    animation: spawn linear forwards;
+    animation: bhspawn linear forwards;
     width: 5vh;
-    animation: spawn linear forwards;
     animation-timeline: view();
     animation-range: entry 20% cover 40%;
     cursor: pointer;
+}
+
+.bhpTransition{
+    transition: opacity 0.75s ease-in-out;
+}
+
+#bhclick1{
+    opacity: 1;
+    font-family: basicfont;
+    position: absolute;
+    z-index: 1;
+    width: 40%; 
+    text-align: center;
+    translate: 0px 50px;
+}
+
+#bhclick2{
+    opacity: 0;
+    font-family: basicfont;
+    position: absolute;
+    z-index: 4; 
+    width: 40%;
+    text-align: center;
+    bottom: 10%;
 }
 
 .appearingtext{
@@ -244,6 +267,7 @@ header{
     0%{
         bottom: 0%;
         z-index: 2;
+        opacity: 0;
     }
     50%{
         bottom: 30%;
@@ -256,6 +280,7 @@ header{
     100%{
         bottom: 0%;
         z-index: 4;
+        opacity: 1;
     }
 }
 
@@ -263,6 +288,7 @@ header{
     100%{
         bottom: 0%;
         z-index: 2;
+        opacity: 0;
     }
     60%{
         bottom: 30%;
@@ -275,6 +301,7 @@ header{
     0%{
         bottom: 0%;
         z-index: 4;
+        opacity: 1;
     }
 }
 
@@ -284,7 +311,7 @@ header{
     z-index: 4;
     bottom: 0%;
     width: 100%;
-    height: 37vh;
+    height: 52.5vh;
     text-align: center;
     position: absolute;
     overflow: hidden;
@@ -294,21 +321,21 @@ header{
     position: absolute;
     width: 20vh;
     height: 15vh;
-    bottom: 32%;
+    bottom: 60%;
     left: calc(50% - 10vh);
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    animation: rotate 20s linear infinite;
+    /*animation: rotate 20s linear infinite;*/
 }
 
-@keyframes rotate {
+/*@keyframes rotate {
     from{
-        transform: perspective(1000px) rotateY(0deg);
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg) ;
     }
     to{
-        transform: perspective(1000px) rotateY(360deg);
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg) ;
     }
-}
+}*/
 
 #objectspinner #ring .ringImages{
     position: absolute;
