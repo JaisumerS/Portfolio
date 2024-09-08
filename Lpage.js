@@ -10,7 +10,7 @@ let animForward = true;
 //BANNER
 const bannerKeyframes = [
     {bottom: '0%', opacity: 0},
-    {bottom: '25%', opacity: 1}
+    {bottom: '18%', opacity: 1}
 ];
 const spinnerTime = {
     duration: 1500,
@@ -22,9 +22,10 @@ const bannerAnimation = new KeyframeEffect(
 );
 const bannerSpawn = new Animation(bannerAnimation, document.timeline);
 //RING
-let ringDegree = (360/ringAmount)
+let ringDegree = (360/ringAmount);
+let currentAngle = 0;
 const ringKeyframes = [
-    {transform: `perspective(1000px) rotateX(-10deg) rotateY(${ringDegree}deg)`}
+    {transform: `perspective(1000px) rotateX(-10deg)`}
 ]
 const ringAnimation = new KeyframeEffect(
     spinnerRing, ringKeyframes, spinnerTime
@@ -32,7 +33,7 @@ const ringAnimation = new KeyframeEffect(
 const ringSpawn = new Animation(ringAnimation, document.timeline);
 //BLACKHOLE
 const bhKeyframes = [
-    {transform: 'translateY(100%) scale(0.5) rotate(360deg)', zIndex: 4}
+    {transform: 'translateY(120%) scale(0.5) rotate(360deg)', zIndex: 4}
 ];
 const bhTime = {
     duration: 1500,
@@ -77,4 +78,37 @@ blackhole.addEventListener('click', e => {
         animForward = false;
         clicked = false;
     }
+});
+
+function animateSpinner(angle) {
+    const newAngle = currentAngle + angle;
+    spinnerRing.animate(
+        [
+            { transform: `perspective(1000px) rotateX(-10deg) rotateY(${currentAngle}deg)` },
+            { transform: `perspective(1000px) rotateX(-10deg) rotateY(${newAngle}deg)` }
+        ],
+        {
+            duration: 1000,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+        }
+    );
+    currentAngle = newAngle;
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight' || clicked == true) {
+        animateSpinner(-ringDegree);
+    } else if (event.key === 'ArrowLeft' || clicked == true) {
+        animateSpinner(ringDegree);
+    }
+});
+
+const leftButton = document.getElementById('left-arrow');
+const rightButton = document.getElementById('right-arrow');
+leftButton.addEventListener('click', () => {
+    animateSpinner(ringDegree);
+});
+rightButton.addEventListener('click', () => {
+    animateSpinner(-ringDegree);
 });
