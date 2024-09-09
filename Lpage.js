@@ -25,7 +25,7 @@ const bannerSpawn = new Animation(bannerAnimation, document.timeline);
 let ringDegree = (360/ringAmount);
 let currentAngle = 0;
 const ringKeyframes = [
-    {transform: `perspective(1000px) rotateX(-10deg)`}
+    {transform: `perspective(1000px) rotateX(-8deg)`}
 ]
 const ringAnimation = new KeyframeEffect(
     spinnerRing, ringKeyframes, spinnerTime
@@ -53,7 +53,7 @@ blackhole.addEventListener('click', e => {
         bhp2.style.transitionDelay = '0.75s';
         bhp1.style.opacity = 0;
         bhp2.style.opacity = 1;
-        spinnerBanner.style.pointerEvents = 'auto';/*temporary*/
+        spinnerBanner.style.pointerEvents = 'auto';
         if (animForward) {
             bannerSpawn.play()
             bhSpawn.play()
@@ -71,7 +71,7 @@ blackhole.addEventListener('click', e => {
         bhp2.style.transitionDelay = '0s';
         bhp1.style.opacity = 1;
         bhp2.style.opacity = 0;
-        spinnerBanner.style.pointerEvents = 'none';/*temporary*/
+        spinnerBanner.style.pointerEvents = 'none';
         bannerSpawn.reverse();
         bhSpawn.reverse();
         ringSpawn.reverse();
@@ -84,8 +84,8 @@ function animateSpinner(angle) {
     const newAngle = currentAngle + angle;
     spinnerRing.animate(
         [
-            { transform: `perspective(1000px) rotateX(-10deg) rotateY(${currentAngle}deg)` },
-            { transform: `perspective(1000px) rotateX(-10deg) rotateY(${newAngle}deg)` }
+            { transform: `perspective(1000px) rotateX(-8deg) rotateY(${currentAngle}deg)` },
+            { transform: `perspective(1000px) rotateX(-8deg) rotateY(${newAngle}deg)` }
         ],
         {
             duration: 1000,
@@ -97,9 +97,9 @@ function animateSpinner(angle) {
 }
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight' || clicked == true) {
+    if (event.key === 'ArrowRight' & clicked == true) {
         animateSpinner(-ringDegree);
-    } else if (event.key === 'ArrowLeft' || clicked == true) {
+    } else if (event.key === 'ArrowLeft' & clicked == true) {
         animateSpinner(ringDegree);
     }
 });
