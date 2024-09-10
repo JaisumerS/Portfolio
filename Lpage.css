@@ -57,6 +57,17 @@ body{
     font-family: "Inter", sans-serif;
 }
 
+#footer-contacts{
+    position: sticky;
+    bottom: 5%;
+    left: calc(50% - 12.5vh);
+    width: 25vh;
+    height: 5vh;
+    background: rgba(255, 255, 255, 0.815);
+    border-radius: 5vh;
+    z-index: 1000;
+}
+
 #nametitle{
     display: flex;
     flex-direction: row;
