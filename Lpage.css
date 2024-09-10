@@ -525,10 +525,9 @@ header{
 }
 
 #project-banner{
-    margin-top: 10vh;
     width: 100vw;
-    height: 100vh;
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, rgb(3, 26, 61) 100%);
+    height: auto;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(3, 26, 61) 10%);
 }
 
 @media screen and (min-width: 769px) {			
