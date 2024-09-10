@@ -137,7 +137,8 @@ header{
 
 .gradient-background{
     padding-top: 100px;
-    height: 200vh;
+    width: 100%;
+   aspect-ratio: 1/0.7;
     background: 
         linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(3, 43, 117, 1) 100%),
         url('/Images/casey-horner-XE2RmuV6ed0-unsplash.jpg');
@@ -149,6 +150,8 @@ header{
 }
 
 .neon-border {
+    left: calc(50%-40vw);
+    text-align: center;
     width: 80vw;
     height: 90vh;
     margin: auto;
