@@ -112,3 +112,13 @@ leftButton.addEventListener('click', () => {
 rightButton.addEventListener('click', () => {
     animateSpinner(-ringDegree);
 });
+
+document.querySelectorAll('.menuoption').forEach(option => {
+    option.addEventListener('click', function() {
+      const targetSection = document.querySelector(this.dataset.target);
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+});
