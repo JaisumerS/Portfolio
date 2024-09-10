@@ -57,11 +57,11 @@ body{
     font-family: "Inter", sans-serif;
 }
 
-#footer-contacts{
+#stickyFooter{
     position: sticky;
     bottom: 5%;
     left: calc(50% - 12.5vh);
-    width: 25vh;
+    width: calc(var(--quantity)*5vh);
     height: 5vh;
     background: rgba(255, 255, 255, 0.815);
     border-radius: 5vh;
