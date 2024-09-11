@@ -39,7 +39,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 100%;
+    height: auto;
     color: #eee;
     background-color: #000;
     font-family: "Inter", sans-serif;
@@ -532,13 +532,15 @@ header{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(3, 26, 61) 10%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(3, 26, 61) 20%);
 }
 
 .greybanner{
+    margin-top: 5vh;
+    text-align: left;
     width: 80vw;
     height: 45vh;
-    border: 5px solid white;
+    border: 1px solid white;
     box-shadow: 0 0 2.5px white, 0 0 5px white, 0 0 10px white, 0 0 15px white;
     border-radius: 5vh;
     background: rgb(32, 32, 32);
