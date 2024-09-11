@@ -568,8 +568,8 @@ header{
 }
 
 .darker-grey {
-    margin-left: 4vh;
-    margin-right: 4vh;
+    margin: 0 4vh;
+    padding: 0 1vh;
     width: 90%;
     height: 35vh;
     border-radius: 2vh;
@@ -593,38 +593,75 @@ header{
 .slider-item {
     position: relative;
     width: 20vw;
-    height: 30vh;
-    background: rgb(0, 0, 0);
-    transition: width 0.5s ease;
+    height: 1 / 0.7;
     border-radius: 2vh;
-    border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
     cursor: pointer;
 }
-  
-.slider-item img {
+
+.slider-item .image-box {
     width: 100%;
-    height: auto;
-    border-radius: 2vh 2vh 0 0;
-}
-  
-.slider-item p {
-    color: white;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    padding: 1vh;
-    font-size: 1rem;
+    height: 100%;
+    border-radius: inherit;
 }
 
-.slider-item:hover {
-    width: 30vw;
-    box-shadow: 0 0 2.5px rgba(255, 255, 255, 0.5), 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
+.slider-item .image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: 50% 90%;
+    transition: 0.5s ease-in-out;
+}
+
+.slider-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.slider-item:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+.slider-item:hover::after {
+    opacity: 1;
+    inset: 20px;
 }
   
-.slider-item:hover p {
+.slider-item .content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.slider-item .content h2,
+.slider-item .content p {
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+}
+.slider-item .content h2 {
+    margin-bottom: 12px;
+    scale: 0.7;
+}
+.slider-item .content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d1d1d1;
+    transform: translateY(50%);
+}
+.slider-item:hover .content h2 {
+    scale: 1;
     opacity: 1;
+}
+.slider-item:hover .content p {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media screen and (min-width: 769px) {			
