@@ -546,6 +546,63 @@ header{
     background: rgb(32, 32, 32);
 }
 
+.darker-grey {
+    width: 100vw;
+    height: 35vh;
+    background: rgb(16, 16, 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    overflow: hidden;
+}
+  
+
+.slider {
+    display: flex;
+    gap: 2vw;
+    overflow: hidden;
+    width: 80vw;
+}
+  
+.slider-item {
+    position: relative;
+    width: 20vw;
+    height: 30vh;
+    background: rgb(64, 64, 64);
+    transition: width 0.5s ease;
+    border-radius: 2vh;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+.slider-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 2vh 2vh 0 0;
+}
+  
+.slider-item p {
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 1vh;
+    font-size: 1rem;
+}
+
+.slider-item:hover {
+    width: 30vw;
+}
+  
+.slider-item:hover p {
+    opacity: 1;
+}
+
 @media screen and (min-width: 769px) {			
     #objectspinner #ring{
         width: 25vh;
