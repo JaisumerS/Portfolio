@@ -122,3 +122,19 @@ document.querySelectorAll('.menuoption').forEach(option => {
       });
     });
 });
+
+const boxes = document.querySelectorAll('.box');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-box');
+            observer.unobserve(box);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+boxes.forEach(box => {
+    observer.observe(box);
+});
