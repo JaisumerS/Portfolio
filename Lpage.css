@@ -587,6 +587,7 @@ header{
     align-items: center;
     overflow: hidden;
     width: 80vw;
+    height: 100%;
 }
   
 .slider-item {
@@ -596,16 +597,15 @@ header{
     background: rgb(0, 0, 0);
     transition: width 0.5s ease;
     border-radius: 2vh;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
     display: flex;
-    align-items: center;
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
 }
   
 .slider-item img {
-    width: 20vw;
+    width: 100%;
     height: auto;
     border-radius: 2vh 2vh 0 0;
 }
@@ -620,6 +620,7 @@ header{
 
 .slider-item:hover {
     width: 30vw;
+    box-shadow: 0 0 2.5px rgba(255, 255, 255, 0.5), 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
 }
   
 .slider-item:hover p {
