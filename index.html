@@ -5,181 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Project</title>
   <link rel="stylesheet" href="Lpage.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="introdiv">
-    <div id="nametitle" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-      <div style="width: 50%;">
-        <p style="margin: 0">Hello, World! Welcome to my <span style="font-family: introfont; color: orangered;">Software Engineering</span> Portfolio</p>
+    <div class="introdiv">
+      <div id="nametitle">
+        <div style="width: 50%;">
+          <p style="margin-top: 3vh;"><span style="color: orangered; font-size: 6vw; font-weight: 600; font-family: 'Rajdhani';">Jaisumer Sandhu<br></span>
+            Hello, World!<br>
+            I’m a student at the University of Calgary with a strong passion for Software Engineering. 
+            With a solid foundation in coding and problem-solving, I aim to turn my skills into a dynamic career in software development, particularly full-stack development. 
+            While web development is my primary goal, I'm also diving into microcontrollers, embedded systems, and network systems to broaden my expertise.</p>
+            <br>
+            <p style="margin: 0;">I thrive on staying busy, constantly applying and expanding my software development knowledge. 
+            Beyond coding, I enjoy entertainment and engaging activities, making a balance between work and fun essential in my journey! &#128187; &#128640; &#128161;</p>
+        </div>
+        <div class="circle"></div>
       </div>
-      <div class="circle"></div>
+
+      <hr style="width: 75%; border: 1px solid white;">
+
     </div>
 
-    <hr style="width: 75%; border: 1px solid white;">
+    <div class="gradient-background">
+      <div class="menu">
+        <div class="menuoption" id="menu1" data-target=".neon-border">About Me</div>
+        <div class="menuoption" id="menu2" data-target=".greybanner">Projects</div>
+        <div class="menuoption" id="menu3">Software Skills</div>
+        <div class="menuoption" id="menu4">Closing Comments</div>
+      </div>    
+      <div class="neon-border box">
+        <div class="neontitle">WHO AM I</div>
 
-  </div>
+        <div class="appearingtext">
+          <h1>About Me</h1>
+        </div>
 
-  <div class="gradient-background">
-    <div class="menu">
-      <div class="menuoption" id="menu1" data-target=".neon-border">About Me</div>
-      <div class="menuoption" id="menu2" data-target=".greybanner">Projects</div>
-      <div class="menuoption" id="menu3">Software Skills</div>
-      <div class="menuoption" id="menu4">Closing Comments</div>
-    </div>    
-    <div class="neon-border box">
-      <div class="neontitle">JAISUMER SANDHU</div>
+        <p id="bhclick1" class="bhpTransition">Ever Clicked a Blackhole?</p>
+        <div id="blackholeclicker">
+          <img class="blackholepng" src="/Icons/milky-way_8966720.png" alt="Icon by Umeicon">
+        </div>
+        <p id="bhclick2" class="bhpTransition">Take a Spin Back to Reality!</p>
 
-      <div class="appearingtext">
-        <h1>About Me</h1>
+        <div id="objectspinner">
+          <button id="left-arrow" class="arrow">&#10094;</button>
+          <div id="ring" style="--amount: 6">
+
+            <div class="ringImages" style="--index: 1">
+              <div class="image-box">
+                <img src="/Images/spinner_images/main.jpg">
+              </div>
+              <div class="card-content">
+                <h5>Hello Everyone!</h5>
+                <p>My name is Jaisumer and I am 20 Years Old</p>
+              </div>
+            </div>
+
+            <div class="ringImages" style="--index: 2">
+              <div class="image-box">
+                <img src="/Images/spinner_images/soccer.jpg">
+              </div>
+              <div class="card-content">
+                <h5>I consider myself to be fairly athletic</h5>
+                <p>I Play Division 1 U23 Mens Soccer And Love Going To The Track!</p>
+              </div>
+            </div>
+
+            <div class="ringImages" style="--index: 3">
+              <div class="image-box">
+                <img src="/Images/spinner_images/uofc-logo.jpg">
+              </div>
+              <div class="card-content">
+                <h5>I attend the University of Calgary</h5>
+                <p>As A Third-Year Software Engineering Student</p>
+              </div>
+            </div>
+
+            <div class="ringImages" style="--index: 4">
+              <div class="image-box">
+                <img src="/Images/spinner_images/webdev.jpg">
+              </div>
+              <div class="card-content">
+                <h5>My goal as a Software Engineer is</h5>
+                <p>To Become a Full-Stack Web Developer At Any Major Company</p>
+              </div>
+            </div>
+
+            <div class="ringImages" style="--index: 5">
+              <div class="image-box">
+                <img src="/Images/spinner_images/ML.jpg">
+              </div>
+              <div class="card-content">
+                <h5>My Second Goal Is To</h5>
+                <p>Get My Mortgaging Liscense On The Side and Possibly Pursue My Own Company!</p>
+              </div>
+            </div>
+
+            <div class="ringImages" style="--index: 6">
+              <div class="image-box">
+                <img src="/Images/spinner_images/PDSD.jpg">
+              </div>
+              <div class="card-content">
+                <h5>My Current Job Is At</h5>
+                <p>Pizza Depot and Shawarma Depot and It Is Our Family Business</p>
+              </div>
+            </div>
+          </div>
+          <button id="right-arrow" class="arrow">&#10095;</button>
+        </div>
+
       </div>
+    </div>
+    <div id="project-banner">
+      <div class="greybanner box">
+        <h1 style="float: left; padding-left: 5vh;">Projects</h1>
+        <hr style="margin-left: 4vh; float: left; width: 75%; border: 1px solid white; box-shadow: 0 20px 20px rgba(0, 0, 0, 1);">
+        <div class="darker-grey">
+          <div class="slider">
 
-      <p id="bhclick1" class="bhpTransition">Ever Clicked a Blackhole?</p>
-      <div id="blackholeclicker">
-        <img class="blackholepng" src="/Icons/milky-way_8966720.png" alt="Icon by Umeicon">
-      </div>
-      <p id="bhclick2" class="bhpTransition">Take a Spin Back to Reality!</p>
+            <div class="slider-item">
+              <div class="image-box">
+                <img src="/Images/spinner_images/ML.jpg" alt="Project Image 1">
+              </div>
+              <div class="content">
+                <h2>Project 1</h2>
+                <p>Project 1 description goes here...</p>
+              </div>
+            </div>
 
-      <div id="objectspinner">
-        <button id="left-arrow" class="arrow">&#10094;</button>
-        <div id="ring" style="--amount: 6">
+            <div class="slider-item">
+              <div class="image-box">
+                <img src="/Images/spinner_images/ML.jpg" alt="Project Image 1">
+              </div>
+              <div class="content">
+                <h2>Project 2</h2>
+                <p>Project 2 description goes here...</p>
+              </div>
+            </div>
 
-          <div class="ringImages" style="--index: 1">
-            <div class="image-box">
-              <img src="/Images/spinner_images/main.jpg">
+            <div class="slider-item">
+              <div class="image-box">
+                <img src="/Images/spinner_images/ML.jpg" alt="Project Image 1">
+              </div>
+              <div class="content">
+                <h2>Project 3</h2>
+                <p>Project 3 description goes here...</p>
+              </div>
             </div>
-            <div class="card-content">
-              <h5>Hello Everyone!</h5>
-              <p>My name is Jaisumer and I am 20 Years Old</p>
-            </div>
-          </div>
 
-          <div class="ringImages" style="--index: 2">
-            <div class="image-box">
-              <img src="/Images/spinner_images/soccer.jpg">
-            </div>
-            <div class="card-content">
-              <h5>I consider myself to be fairly athletic</h5>
-              <p>I Play Division 1 U23 Mens Soccer And Love Going To The Track!</p>
-            </div>
-          </div>
-
-          <div class="ringImages" style="--index: 3">
-            <div class="image-box">
-              <img src="/Images/spinner_images/uofc-logo.jpg">
-            </div>
-            <div class="card-content">
-              <h5>I attend the University of Calgary</h5>
-              <p>As A Third-Year Software Engineering Student</p>
-            </div>
-          </div>
-
-          <div class="ringImages" style="--index: 4">
-            <div class="image-box">
-              <img src="/Images/spinner_images/webdev.jpg">
-            </div>
-            <div class="card-content">
-              <h5>My goal as a Software Engineer is</h5>
-              <p>To Become a Full-Stack Web Developer At Any Major Company</p>
-            </div>
-          </div>
-
-          <div class="ringImages" style="--index: 5">
-            <div class="image-box">
-              <img src="/Images/spinner_images/ML.jpg">
-            </div>
-            <div class="card-content">
-              <h5>My Second Goal Is To</h5>
-              <p>Get My Mortgaging Liscense On The Side and Possibly Pursue My Own Company!</p>
-            </div>
-          </div>
-
-          <div class="ringImages" style="--index: 6">
-            <div class="image-box">
-              <img src="/Images/spinner_images/PDSD.jpg">
-            </div>
-            <div class="card-content">
-              <h5>My Current Job Is At</h5>
-              <p>Pizza Depot and Shawarma Depot and It Is Our Family Business</p>
-            </div>
           </div>
         </div>
-        <button id="right-arrow" class="arrow">&#10095;</button>
-      </div>
-
-    </div>
-  </div>
-  <div id="project-banner">
-    <div class="greybanner box">
-      <h1 style="float: left; padding-left: 5vh;">Projects</h1>
-      <hr style="margin-left: 4vh; float: left; width: 75%; border: 1px solid white; box-shadow: 0 20px 20px rgba(0, 0, 0, 1);">
-      <div class="darker-grey">
-        <div class="slider">
-
-          <div class="slider-item">
-            <div class="image-box">
-              <img src="/Images/spinner_images/ML.jpg" alt="Project Image 1">
-            </div>
-            <div class="content">
-              <h2>Project 1</h2>
-              <p>Project 1 description goes here...</p>
-            </div>
-          </div>
-
-          <div class="slider-item">
-            <div class="image-box">
-              <img src="/Images/spinner_images/ML.jpg" alt="Project Image 1">
-            </div>
-            <div class="content">
-              <h2>Project 2</h2>
-              <p>Project 2 description goes here...</p>
-            </div>
-          </div>
-
-          <div class="slider-item">
-            <div class="image-box">
-              <img src="/Images/spinner_images/ML.jpg" alt="Project Image 1">
-            </div>
-            <div class="content">
-              <h2>Project 3</h2>
-              <p>Project 3 description goes here...</p>
-            </div>
-          </div>
-
-        </div>
       </div>
     </div>
-  </div>
-  <div id="stickyFooter" style="--quantity: 5">
-    <div class="footerContacts">
-      <a href="https://www.linkedin.com/in/jaisumer-sandhu-3399b4248/" target="_blank">
-        <img src="/Icons/In-Blue-48-Γö¼┬½@2x.png">
-      </a>
+    <div id="stickyFooter" style="--quantity: 5">
+      <div class="footerContacts">
+        <a href="https://www.linkedin.com/in/jaisumer-sandhu-3399b4248/" target="_blank">
+          <img src="/Icons/In-Blue-48-Γö¼┬½@2x.png">
+        </a>
+      </div>
+      <div class="footerContacts">
+        <a href="https://www.instagram.com/jaisumer_sandhu/" target="_blank">
+          <img src="/Icons/Instagram_Glyph_Gradient.png">
+        </a>
+      </div>
+      <div class="footerContacts">
+        <img src="/Icons/512px-Mail_(iOS).svg.png">
+        <div class="email-dropdown">
+          <p style="padding: 0; margin: 0;"><b>Email:</b></p>
+          <a href="mailto:sumer.sandhu@hotmail.com"><b>Main / work: </b>sumer.sandhu@hotmail.com</a>
+          <a href="mailto:jaisumerss@gmail.com"><b>Leisure / Gmail: </b>jaisumerss@gmail.com</a>
+          <a href="mailto:jaisumer.sandhu@ucalgary.ca"><b>School: </b>jaisumer.sandhu@ucalgary.ca</a>
+        </div>  
+      </div>
+      <div class="footerContacts">
+        <a href="https://github.com/JaisumerS" target="_blank">
+          <img src="/Icons/github-mark-white.png">
+        </a>
+      </div>
+      <div class="footerContacts">
+        <a href="https://devpost.com/jaisumerss?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank">
+          <img src="/Icons/devpost_logo_icon_169279.png">
+        </a>
+      </div>
     </div>
-    <div class="footerContacts">
-      <a href="https://www.instagram.com/jaisumer_sandhu/" target="_blank">
-        <img src="/Icons/Instagram_Glyph_Gradient.png">
-      </a>
-    </div>
-    <div class="footerContacts">
-      <img src="/Icons/512px-Mail_(iOS).svg.png">
-      <div class="email-dropdown">
-        <p style="padding: 0; margin: 0;"><b>Email:</b></p>
-        <a href="mailto:sumer.sandhu@hotmail.com"><b>Main / work: </b>sumer.sandhu@hotmail.com</a>
-        <a href="mailto:jaisumerss@gmail.com"><b>Leisure / Gmail: </b>jaisumerss@gmail.com</a>
-        <a href="mailto:jaisumer.sandhu@ucalgary.ca"><b>School: </b>jaisumer.sandhu@ucalgary.ca</a>
-      </div>  
-    </div>
-    <div class="footerContacts">
-      <a href="https://github.com/JaisumerS" target="_blank">
-        <img src="/Icons/github-mark-white.png">
-      </a>
-    </div>
-    <div class="footerContacts">
-      <a href="https://devpost.com/jaisumerss?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank">
-        <img src="/Icons/devpost_logo_icon_169279.png">
-      </a>
-    </div>
-  </div>
   <script src="Lpage.js"></script>
 </body>
 </html>
