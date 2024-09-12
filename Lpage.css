@@ -51,7 +51,7 @@ body{
 
 #stickyFooter{
     position: sticky;
-    bottom: 5%;
+    bottom: 0;
     left: calc(50% - calc(var(--quantity)*5vh/2));
     width: calc(var(--quantity)*5vh);
     height: 5vh;
@@ -139,6 +139,10 @@ body{
     height: auto;
     background: 
         linear-gradient(to top, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+}
+
+.introContent{
+    width: 50%;
 }
 
 .circle {
@@ -542,19 +546,25 @@ header{
 .greybanner{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 5vh;
     width: 80vw;
-    height: 50vh;
+    height: auto;
     border: 2px solid white;
     border-radius: 5vh;
     background: rgb(32, 32, 32);
 }
 
+.flxdirchange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .darker-grey {
-    margin: 0 4vw;
+    margin: 4vw 4vw;
     padding: 0 1vw;
-    width: 90%;
+    width: 50vh;
     height: 35vh;
     border-radius: 2vh;
     background: rgb(16, 16, 16);
@@ -564,25 +574,40 @@ header{
     align-items: center;
 }
 
+#projects{
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
 .slider {
     display: flex;
-    justify-content: flex-start;
     gap: 4vh;
     align-items: center;
     overflow-y: hidden;
-    overflow-x: auto;
+    overflow-x: scroll;
     width: 100%;
     height: 100%;
+    white-space: nowrap;
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    scroll-snap-type: x mandatory;
 }
   
 .slider-item {
     position: relative;
-    width: 40vh;
+    width: 100%;
     height: 100%;
     border-radius: 2vh;
     cursor: pointer;
+    flex-shrink: 0;
+    flex-grow: 0;
+    scroll-snap-align: center;
 }
 
 .slider-item .image-box {
@@ -603,6 +628,7 @@ header{
 .slider-item::after {
     content: "";
     position: absolute;
+    text-align: center;
     inset: 0;
     border: 2px solid white;
     border-radius: inherit;
@@ -625,6 +651,9 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
   
 .slider-item .content h2,
@@ -657,6 +686,9 @@ header{
         height: 17vh;
         left: calc(50% - 12.5vh);
     }
+    .darker-grey{
+        margin-right: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -670,6 +702,18 @@ header{
     }
     #objectspinner #ring .ringImages .image-box{
         width: 10vh;
+    }
+    .slider-item {
+        width: 100%;
+    }
+    .darker-grey{
+        width: 60vw;
+    }
+    .flxdirchange{
+        flex-direction: column;
+    }
+    #projects{
+        width: 90%;
     }
 }
 
@@ -688,57 +732,19 @@ header{
     #objectspinner #ring .ringImages .image-box{
         width: 6vh;
     }
-}
-
-/*
-.menuoption {
-    position: relative;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(45deg, rgb(0, 0, 0) 20%, rgb(0, 46, 78));
-    color: white;
-    font-size: 1.2rem;
-    border: 2px solid white;
-    border-radius: 5px;
-    z-index: 1;
-    cursor: pointer;
-    overflow: hidden;
-    animation: menuoptionAnimation 2s ease-out forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-}
-
-.menuoption::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgb(0, 0, 0) 20%, rgb(255, 166, 0), rgb(255, 51, 0), rgb(255, 0, 212) 70%);
-    opacity: 0;
-    transition: opacity 2s ease;
-    z-index: -1;
-}
-
-.menuoption:hover::before {
-    opacity: 1;
-}
-
-.menuoption:hover {
-    border: 2px solid black;
-}
-
-@keyframes menuoptionAnimation {
-    0% {
-        opacity: 0;
-        width: 0%;
+    #nametitle{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vh;
     }
-    100% {
-        opacity: 1;
-        width: 100%;
+    .introContent{
+        width: 85%;
+    }
+    .circle{
+        margin:0;
     }
 }
-    */
