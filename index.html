@@ -28,7 +28,7 @@
     <div class="introdiv">
       <div id="nametitle">
         <div class="introContent">
-          <p style="margin-top: 3vh;"><span style="color: orangered; font-size: 6vw; font-weight: 600; font-family: 'Rajdhani';">Jaisumer Sandhu<br></span>
+          <p style="margin-top: 3vh;"><span style="color: orangered; font-size: 6vw; font-weight: 600; font-family: 'Rajdhani'; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Jaisumer Sandhu<br></span>
             Hello, World!<br>
             I’m a student at the University of Calgary with a strong passion for Software Engineering. 
             With a solid foundation in coding and problem-solving, I aim to turn my skills into a dynamic career in software development, particularly full-stack development. 
@@ -46,17 +46,17 @@
 
     <div class="gradient-background"> 
       <div class="neon-border box">
-        <div class="neontitle">Behind The Code</div>
+        <div class="neontitle" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Behind The Code</div>
 
         <div class="appearingtext">
           <h1>About Me</h1>
         </div>
 
-        <p id="bhclick1" class="bhpTransition">Ever Clicked a Blackhole?</p>
+        <p id="bhclick1" class="bhpTransition" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Ever Clicked a Blackhole?</p>
         <div id="blackholeclicker">
           <img class="blackholepng" src="/Icons/milky-way_8966720.png" alt="Icon by Umeicon">
         </div>
-        <p id="bhclick2" class="bhpTransition">Take a Spin Back to Reality!</p>
+        <p id="bhclick2" class="bhpTransition" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Take a Spin Back to Reality!</p>
 
         <div id="objectspinner">
           <button id="left-arrow" class="arrow">&#10094;</button>
@@ -129,7 +129,7 @@
     </div>
     <div id="tabs-banner">
       <div class="greybanner box">
-        <h1>Projects</h1>
+        <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Projects</h1>
         <hr style="width: 75%; border: 1px solid white; box-shadow: 0 20px 20px rgba(0, 0, 0, 1);">
         <div class="flxdirchange">
           <div class="darker-grey">
@@ -198,13 +198,13 @@
             </div>
           </div>
           <section id="projects">
-            <h2>Projects</h2>
+            <h2 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Projects Include The Following:</h2>
             <ul>
               <li>
                 <strong>Arduino Projects</strong>: Worked on microcontroller-based projects, utilizing sensors, actuators, and C++ to build interactive systems. 
               </li>
               <li>
-                <strong>Web Development</strong>: Developed full-stack web applications using HTML, CSS, JavaScript, and backend technologies like Node.js, with a focus on responsive design and user-friendly interfaces. 
+                <strong>Web Development</strong>: Developed full-stack web applications using HTML, CSS, JavaScript, and backend technologies like Node.js and React, with a focus on responsive design and user-friendly interfaces. 
               </li>
               <li>
                 <strong>Terminal-Based Servers</strong>: Created command-line servers that manage and execute various tasks, handling multiple clients and implementing protocols for secure communication. 
@@ -220,24 +220,40 @@
         <h1>Skills</h1>
         <hr />
         <div class="tech-container">
-          <h2>Languages</h2>
-          <div class="tech-bar">
-            <div class="bar-item item1">Python</div>
-            <div class="bar-item item2">C</div>
-            <div class="bar-item item3">C++</div>
-            <div class="bar-item item4">Java</div>
-            <div class="bar-item item5">HTML5</div>
-            <div class="bar-item item1">CSS3</div>
-            <div class="bar-item item1">Javascript</div>
-            <div class="bar-item item1">RISC-V</div>
+          <h2>Frontend</h2>
+          <div class="tech-bar bar1" style="--skills: 7; --time:25;">
+            <div class="bar-item" style="--skindx: 1">HTML5</div>
+            <div class="bar-item" style="--skindx: 2">CSS4</div>
+            <div class="bar-item" style="--skindx: 3">JavaScript</div>
+            <div class="bar-item" style="--skindx: 4">React</div>
+            <div class="bar-item" style="--skindx: 5">TypeScript</div>
+            <div class="bar-item" style="--skindx: 6">Node.js</div>
+            <div class="bar-item" style="--skindx: 7">Next.js</div>
           </div>
-          <h2>Technologies</h2>
-          <div class="tech-bar">
-
+          <h2>[Backend] Languages & Tools</h2>
+          <div class="tech-bar bar2" style="--skills: 10; --time:30;">
+            <div class="bar-item" style="--skindx: 1">Python</div>
+            <div class="bar-item" style="--skindx: 2">C</div>
+            <div class="bar-item" style="--skindx: 3">C++</div>
+            <div class="bar-item" style="--skindx: 4">Java</div>
+            <div class="bar-item" style="--skindx: 5">RISC-V</div>
+            <div class="bar-item" style="--skindx: 6">JUnit</div>
+            <div class="bar-item" style="--skindx: 7">Hamcrest</div>
+            <div class="bar-item" style="--skindx: 8">BootStrap</div>
+            <div class="bar-item" style="--skindx: 9">Pandas</div>
+            <div class="bar-item" style="--skindx: 10">Flask</div>
           </div>
-          <h2>Other Frameworks/ Libraries</h2>
-          <div class="tech-bar">
-
+          <h2>Technologies / Databases</h2>
+          <div class="tech-bar bar3" style="--skills: 9; --time:27;">
+            <div class="bar-item" style="--skindx: 1">PostgreSQL</div>
+            <div class="bar-item" style="--skindx: 2">MySQL</div>
+            <div class="bar-item" style="--skindx: 3">Git</div>
+            <div class="bar-item" style="--skindx: 4">Postman</div>
+            <div class="bar-item" style="--skindx: 5">Jupyter</div>
+            <div class="bar-item" style="--skindx: 6">Intel Quartus</div>
+            <div class="bar-item" style="--skindx: 7">Arduino</div>
+            <div class="bar-item" style="--skindx: 8">MPLAB</div>
+            <div class="bar-item" style="--skindx: 9">Microsoft Excel</div>
           </div>
         </div>
         <hr />

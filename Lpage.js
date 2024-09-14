@@ -133,8 +133,26 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.1
+    threshold: 0.2
 });
 boxes.forEach(box => {
     observer.observe(box);
 });
+
+function applyAnimationDelays() {
+    const techBars = document.querySelectorAll('.tech-bar');
+
+    techBars.forEach(bar => {
+        const skillsCount = parseInt(getComputedStyle(bar).getPropertyValue('--skills'), 10);
+        const time = parseInt(getComputedStyle(bar).getPropertyValue('--time'), 10);
+        const items = bar.querySelectorAll('.bar-item');
+
+        items.forEach(item => {
+            const skIndex = parseInt(getComputedStyle(item).getPropertyValue('--skindx'), 10);
+            const animationDelay = `calc(${time}s / ${skillsCount} * (${skillsCount} - ${skIndex}) * -1)`;
+            item.style.animationDelay = animationDelay;
+            item.style.animationDuration = `${time}s`;
+        });
+    });
+}
+applyAnimationDelays();
