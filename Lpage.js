@@ -124,7 +124,7 @@ document.querySelectorAll('.menuoption').forEach(option => {
 });
 
 const boxes = document.querySelectorAll('.box');
-
+const skills = document.getElementsByClassName('skills')
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
