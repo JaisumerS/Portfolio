@@ -648,7 +648,6 @@ header{
 }
 
 #projects{
-    width: 50%;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -841,6 +840,25 @@ header{
     #projects ul{
         font-size: 2vh;
     }
+    .card-content p{
+        font-size: 1.2vh;
+    }
+}
+
+@media screen and (max-width: 990px){
+    .flxdirchange{
+        flex-direction: column;
+    }
+
+    .slider-item {
+        width: 100%;
+    }
+    .darker-grey{
+        width: 60vw;
+    }
+    #projects{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -865,7 +883,7 @@ header{
         flex-direction: column;
     }
     #projects{
-        width: 90%;
+        width: 100%;
     }
     #nametitle{
         display: flex;
