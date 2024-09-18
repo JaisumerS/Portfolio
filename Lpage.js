@@ -123,6 +123,15 @@ document.querySelectorAll('.menuoption').forEach(option => {
     });
 });
 
+const sliderItems = document.querySelectorAll('.slider-item');
+
+sliderItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const url = item.getAttribute('data-link');
+        window.open(url, '_blank');
+    });
+});
+
 const boxes = document.querySelectorAll('.box');
 const skills = document.getElementsByClassName('skills')
 const observer = new IntersectionObserver((entries) => {
