@@ -800,6 +800,17 @@ header{
     height: 100%;
     background-color: rgba(5, 39, 88, 0.633);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-item .imgbox{
+    width: 80%;
+    height: 80%;
+    background-color: #eee;
+    border-radius: 10px;
 }
 
 .bar1 .bar-item{
